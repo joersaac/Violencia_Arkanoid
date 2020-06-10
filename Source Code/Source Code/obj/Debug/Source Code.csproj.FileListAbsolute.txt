@@ -1,0 +1,10 @@
+C:\Users\Axel Medina\Desktop\Proyecto_Poo\Violencia_Arkanoid\Source Code\Source Code\bin\Debug\Source Code.exe.config
+C:\Users\Axel Medina\Desktop\Proyecto_Poo\Violencia_Arkanoid\Source Code\Source Code\bin\Debug\Source Code.exe
+C:\Users\Axel Medina\Desktop\Proyecto_Poo\Violencia_Arkanoid\Source Code\Source Code\bin\Debug\Source Code.pdb
+C:\Users\Axel Medina\Desktop\Proyecto_Poo\Violencia_Arkanoid\Source Code\Source Code\obj\Debug\Source Code.csprojAssemblyReference.cache
+C:\Users\Axel Medina\Desktop\Proyecto_Poo\Violencia_Arkanoid\Source Code\Source Code\obj\Debug\Source_Code.Properties.Resources.resources
+C:\Users\Axel Medina\Desktop\Proyecto_Poo\Violencia_Arkanoid\Source Code\Source Code\obj\Debug\Source Code.csproj.GenerateResource.cache
+C:\Users\Axel Medina\Desktop\Proyecto_Poo\Violencia_Arkanoid\Source Code\Source Code\obj\Debug\Source Code.exe
+C:\Users\Axel Medina\Desktop\Proyecto_Poo\Violencia_Arkanoid\Source Code\Source Code\obj\Debug\Source Code.pdb
+C:\Users\Axel Medina\Desktop\Proyecto_Poo\Violencia_Arkanoid\Source Code\Source Code\obj\Debug\Source_Code.frmLogin.resources
+C:\Users\Axel Medina\Desktop\Proyecto_Poo\Violencia_Arkanoid\Source Code\Source Code\obj\Debug\Source_Code.frmMenu.resources

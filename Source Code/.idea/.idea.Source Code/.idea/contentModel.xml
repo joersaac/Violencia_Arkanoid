@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Axel Medina\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Axel Medina\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_Source Code.-1554265431.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Axel Medina\Desktop\Proyecto_Poo\Violencia_Arkanoid\Source Code" t="IncludeFlat">
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Source Code" t="IncludeRecursive">
+        <e p="App.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="frmLogin.cs" t="Include" />
+        <e p="frmLogin.Designer.cs" t="Include" />
+        <e p="frmLogin.resx" t="Include" />
+        <e p="frmMenu.cs" t="Include" />
+        <e p="frmMenu.Designer.cs" t="Include" />
+        <e p="frmMenu.resx" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+          <e p="Resources.Designer.cs" t="Include" />
+          <e p="Resources.resx" t="Include" />
+          <e p="Settings.Designer.cs" t="Include" />
+          <e p="Settings.settings" t="Include" />
+        </e>
+        <e p="Source Code.csproj" t="IncludeRecursive" />
+      </e>
+      <e p="Source Code.sln" t="IncludeFlat" />
+    </e>
+  </component>
+</project>
