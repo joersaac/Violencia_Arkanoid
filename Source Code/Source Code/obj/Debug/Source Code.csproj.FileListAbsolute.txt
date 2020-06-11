@@ -8,3 +8,16 @@ C:\Users\Axel Medina\Desktop\Proyecto_Poo\Violencia_Arkanoid\Source Code\Source 
 C:\Users\Axel Medina\Desktop\Proyecto_Poo\Violencia_Arkanoid\Source Code\Source Code\obj\Debug\Source Code.pdb
 C:\Users\Axel Medina\Desktop\Proyecto_Poo\Violencia_Arkanoid\Source Code\Source Code\obj\Debug\Source_Code.frmLogin.resources
 C:\Users\Axel Medina\Desktop\Proyecto_Poo\Violencia_Arkanoid\Source Code\Source Code\obj\Debug\Source_Code.frmMenu.resources
+C:\Users\JOAQUIN SANTOS\Documents\Repositorios\Violencia_Arkanoid\Violencia_Arkanoid\Source Code\Source Code\bin\Debug\Source Code.exe.config
+C:\Users\JOAQUIN SANTOS\Documents\Repositorios\Violencia_Arkanoid\Violencia_Arkanoid\Source Code\Source Code\bin\Debug\Source Code.exe
+C:\Users\JOAQUIN SANTOS\Documents\Repositorios\Violencia_Arkanoid\Violencia_Arkanoid\Source Code\Source Code\bin\Debug\Source Code.pdb
+C:\Users\JOAQUIN SANTOS\Documents\Repositorios\Violencia_Arkanoid\Violencia_Arkanoid\Source Code\Source Code\obj\Debug\Source Code.csprojAssemblyReference.cache
+C:\Users\JOAQUIN SANTOS\Documents\Repositorios\Violencia_Arkanoid\Violencia_Arkanoid\Source Code\Source Code\obj\Debug\Source_Code.frmGame.resources
+C:\Users\JOAQUIN SANTOS\Documents\Repositorios\Violencia_Arkanoid\Violencia_Arkanoid\Source Code\Source Code\obj\Debug\Source_Code.frmLogin.resources
+C:\Users\JOAQUIN SANTOS\Documents\Repositorios\Violencia_Arkanoid\Violencia_Arkanoid\Source Code\Source Code\obj\Debug\Source_Code.frmMenu.resources
+C:\Users\JOAQUIN SANTOS\Documents\Repositorios\Violencia_Arkanoid\Violencia_Arkanoid\Source Code\Source Code\obj\Debug\Source_Code.Properties.Resources.resources
+C:\Users\JOAQUIN SANTOS\Documents\Repositorios\Violencia_Arkanoid\Violencia_Arkanoid\Source Code\Source Code\obj\Debug\Source_Code.uscGame.resources
+C:\Users\JOAQUIN SANTOS\Documents\Repositorios\Violencia_Arkanoid\Violencia_Arkanoid\Source Code\Source Code\obj\Debug\Source Code.csproj.GenerateResource.cache
+C:\Users\JOAQUIN SANTOS\Documents\Repositorios\Violencia_Arkanoid\Violencia_Arkanoid\Source Code\Source Code\obj\Debug\Source Code.csproj.CoreCompileInputs.cache
+C:\Users\JOAQUIN SANTOS\Documents\Repositorios\Violencia_Arkanoid\Violencia_Arkanoid\Source Code\Source Code\obj\Debug\Source Code.exe
+C:\Users\JOAQUIN SANTOS\Documents\Repositorios\Violencia_Arkanoid\Violencia_Arkanoid\Source Code\Source Code\obj\Debug\Source Code.pdb
