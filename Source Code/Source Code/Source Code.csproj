@@ -46,6 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Block.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ControlJuego.cs" />
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
