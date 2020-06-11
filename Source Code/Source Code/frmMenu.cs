@@ -26,7 +26,22 @@ namespace Source_Code
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Hide();
+            if (MessageBox.Show("¿Seguro que deseas salir ?", "ARKANOID",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                MessageBox.Show("Cerrando..." + "\nHASTA PRONTO!", "ARKANOID", MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+                Application.Exit();
+               
+            }
+            else
+            {
+                
+            }
+
         }
+        
+        
+        
     }
 }

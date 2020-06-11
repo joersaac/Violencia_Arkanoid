@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Axel Medina\.Rider2019.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Axel Medina\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_Source Code.-1554265431.00" t="ExcludeRecursive" />
-    <e p="C:\Users\Axel Medina\Desktop\Proyecto_Poo\Violencia_Arkanoid\Source Code" t="IncludeFlat">
+    <e p="C:\Users\Wilfredo Josué\AppData\local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Wilfredo Josué\AppData\local\JetBrains\Rider2020.1\resharper-host\local\Transient\ReSharperHost\v201\SolutionCaches\_Source Code.-1832943970.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Wilfredo Josué\Documents\ARKANOID\Violencia_Arkanoid\Source Code" t="IncludeFlat">
       <e p="packages" t="ExcludeRecursive" />
       <e p="Source Code" t="IncludeRecursive">
         <e p="App.config" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
+        <e p="Block.cs" t="Include" />
+        <e p="ConectionDB.cs" t="Include" />
+        <e p="ControlBall.cs" t="Include" />
+        <e p="ControlJuego.cs" t="Include" />
+        <e p="frmGame.cs" t="Include" />
+        <e p="frmGame.Designer.cs" t="Include" />
+        <e p="frmGame.resx" t="Include" />
         <e p="frmLogin.cs" t="Include" />
         <e p="frmLogin.Designer.cs" t="Include" />
         <e p="frmLogin.resx" t="Include" />
@@ -15,6 +22,7 @@
         <e p="frmMenu.Designer.cs" t="Include" />
         <e p="frmMenu.resx" t="Include" />
         <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
         <e p="Program.cs" t="Include" />
         <e p="Properties" t="Include">
           <e p="AssemblyInfo.cs" t="Include" />
@@ -24,6 +32,9 @@
           <e p="Settings.settings" t="Include" />
         </e>
         <e p="Source Code.csproj" t="IncludeRecursive" />
+        <e p="uscGame.cs" t="Include" />
+        <e p="uscGame.Designer.cs" t="Include" />
+        <e p="uscGame.resx" t="Include" />
       </e>
       <e p="Source Code.sln" t="IncludeFlat" />
     </e>
