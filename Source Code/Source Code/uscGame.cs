@@ -198,7 +198,7 @@ namespace Source_Code
 
                 //Se comprueban las condiciones aumento de dificultas y se vuelven a crear los bloques para el
                 //siguiente nivel
-                //aumentoDeDificultad();
+                aumentoDeDificultad();
                 setBlocks();
             }
         }
@@ -214,6 +214,22 @@ namespace Source_Code
                 ControlJuego.timer--;
                 lblTime.Text = $"TIME: {ControlJuego.timer}";
             }
+        }
+
+        private void aumentoDeDificultad()
+        {
+            //Esta funcion lleva control de la dificultad conforme avanzan los niveles
+            //se reduce la plataforma en un 15% por cada aumento de dificultad
+            if (ControlJuego.level == 3)
+                picPlatform.Width = Convert.ToInt32(picPlatform.Width - (picPlatform.Width * 0.15));
+            else if (ControlJuego.level == 5)
+                picPlatform.Width = Convert.ToInt32(picPlatform.Width - (picPlatform.Width * 0.15));
+            else if (ControlJuego.level == 7)
+                picPlatform.Width = Convert.ToInt32(picPlatform.Width - (picPlatform.Width * 0.15));
+            else if (ControlJuego.level == 9)
+                picPlatform.Width = Convert.ToInt32(picPlatform.Width - (picPlatform.Width * 0.15));
+            else if (ControlJuego.level == 11)
+                picPlatform.Width = Convert.ToInt32(picPlatform.Width - (picPlatform.Width * 0.15));
         }
     }
 }
