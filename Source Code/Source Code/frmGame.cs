@@ -15,6 +15,14 @@ namespace Source_Code
         public frmGame()
         {
             InitializeComponent();
+            WindowState = FormWindowState.Maximized;
+            Height = Screen.PrimaryScreen.Bounds.Height;
+            Width = Screen.PrimaryScreen.Bounds.Width;
+        }
+
+        private void frmGame_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
