@@ -148,6 +148,8 @@ namespace Source_Code
 
             //Se miran las colisiones con la plataforma/jugador
             ControlBall.ColisionPlat(picBall, picPlatform);
+
+            LevelFinished();
         }
 
         private void uscGame_MouseClick(object sender, MouseEventArgs e)
@@ -164,6 +166,41 @@ namespace Source_Code
             //la plataforma no se movera hasta que el juego inicie
             if (e.X > picPlatform.Width / 2 && e.X < (this.ClientSize.Width - (picPlatform.Width / 2)) && ControlJuego.started)
                 picPlatform.Left = e.X - (picPlatform.Width / 2);
+        }
+
+        private void LevelFinished()
+        {
+            if (ControlJuego.score == ControlJuego.total)
+            {
+                //se paran los timers 1 y 2 y se reinician las pocisiones de la plataforma y la pelota
+                timer1.Enabled = false;
+                //timer2.Enabled = false;
+                reloadPosition();
+                lblMessage.Visible = true;
+
+                //se aumenta el nivel 
+                ControlJuego.level++;
+                lblLevel.Text = $"LEVEL {ControlJuego.level}";
+
+                //se suma la bonificacion de tiempo tanto al puntaje como al puntaje total o maximo y
+                //se reinicia el tiempo
+                ControlJuego.score += Convert.ToInt32(ControlJuego.timer / 10);
+                lblScore.Text = $"SCORE: {ControlJuego.score}";
+                ControlJuego.total += Convert.ToInt32(ControlJuego.timer / 10);
+                ControlJuego.timer = 6000;
+                lblTime.Text = $"TIME: {ControlJuego.timer}";
+
+                //Se coloca la velocidad horizontal en 0 y la vertical en -2 y se reinician las posiciones de
+                //la plataforma y la pelota
+                ControlBall.vSpeed = -2;
+                ControlBall.hSpeed = 0;
+                reloadPosition();
+
+                //Se comprueban las condiciones aumento de dificultas y se vuelven a crear los bloques para el
+                //siguiente nivel
+                //aumentoDeDificultad();
+                setBlocks();
+            }
         }
     }
 }
