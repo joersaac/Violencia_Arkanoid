@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Wilfredo Josué\AppData\local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Wilfredo Josué\AppData\local\JetBrains\Rider2020.1\resharper-host\local\Transient\ReSharperHost\v201\SolutionCaches\_Source Code.-1832943970.00" t="ExcludeRecursive" />
-    <e p="C:\Users\Wilfredo Josué\Documents\ARKANOID\Violencia_Arkanoid\Source Code" t="IncludeFlat">
+    <e p="C:\Users\Axel Medina\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Axel Medina\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_Source Code.-1554265431.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Axel Medina\Desktop\Proyecto_Poo\Violencia_Arkanoid\Source Code" t="IncludeFlat">
       <e p="packages" t="ExcludeRecursive" />
       <e p="Source Code" t="IncludeRecursive">
         <e p="App.config" t="Include" />
