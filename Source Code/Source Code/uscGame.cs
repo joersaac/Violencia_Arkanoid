@@ -112,13 +112,13 @@ namespace Source_Code
                     ControlBall.vSpeed = 0;
                     ControlBall.hSpeed = 0;
                     timer1.Enabled = false;
-                    //timer2.Enabled = false;
+                    timer2.Enabled = false;
                     ControlJuego.timer = 0;
                     MessageBox.Show($"GAME OVER");
                 }
 
                 //se detienen los timers 1 y 2 y se reinician las posiciones de la plataforma y la pelota
-                //timer2.Enabled = false;
+                timer2.Enabled = false;
                 timer1.Enabled = false;
 
                 reloadPosition();
@@ -156,7 +156,7 @@ namespace Source_Code
         {
             //cuando se le de click el juego se habra iniciado
             timer1.Enabled = true;
-            //timer2.Enabled = true;
+            timer2.Enabled = true;
             ControlJuego.started = true;
             lblMessage.Visible = false;
         }
@@ -174,7 +174,7 @@ namespace Source_Code
             {
                 //se paran los timers 1 y 2 y se reinician las pocisiones de la plataforma y la pelota
                 timer1.Enabled = false;
-                //timer2.Enabled = false;
+                timer2.Enabled = false;
                 reloadPosition();
                 lblMessage.Visible = true;
 
@@ -200,6 +200,19 @@ namespace Source_Code
                 //siguiente nivel
                 //aumentoDeDificultad();
                 setBlocks();
+            }
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            //se lleva el control del tiempo
+            //el tiempo solo sera bonificacion por lo que si se acaba solo no se obtendra bonificacion
+            if (ControlJuego.timer == 0)
+                timer2.Stop();
+            else
+            {
+                ControlJuego.timer--;
+                lblTime.Text = $"TIME: {ControlJuego.timer}";
             }
         }
     }
