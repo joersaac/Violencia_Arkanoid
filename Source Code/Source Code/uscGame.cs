@@ -80,6 +80,23 @@ namespace Source_Code
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            for (int x = 0; x < ControlJuego.row; x++)
+            {
+                bool colision = false;
+                for (int y = 0; y < ControlJuego.col; y++)
+                {
+                    if (ControlBall.colisiones(picBall, blocks[x, y]))
+                    {
+                        lblScore.Text = $"SCORE: {ControlJuego.score}";
+                        colision = true;
+                        break;
+                    }
+                }
+                if (colision)
+                    break;
+            }
+
+            //Se mueve a la pelota sumando su posicion Top con la velocidad vertival y su posicion Left con la velocidad horizontal 
             picBall.Top += ControlBall.vSpeed;
             picBall.Left += ControlBall.hSpeed;
 
@@ -129,6 +146,24 @@ namespace Source_Code
                 picBall.Left = 1;
             }
 
+            //Se miran las colisiones con la plataforma/jugador
+            ControlBall.ColisionPlat(picBall, picPlatform);
+        }
+
+        private void uscGame_MouseClick(object sender, MouseEventArgs e)
+        {
+            //cuando se le de click el juego se habra iniciado
+            timer1.Enabled = true;
+            //timer2.Enabled = true;
+            ControlJuego.started = true;
+            lblMessage.Visible = false;
+        }
+
+        private void uscGame_MouseMove(object sender, MouseEventArgs e)
+        {
+            //la plataforma no se movera hasta que el juego inicie
+            if (e.X > picPlatform.Width / 2 && e.X < (this.ClientSize.Width - (picPlatform.Width / 2)) && ControlJuego.started)
+                picPlatform.Left = e.X - (picPlatform.Width / 2);
         }
     }
 }

@@ -153,6 +153,7 @@
             // 
             // timer1
             // 
+            this.timer1.Interval = 10;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // uscGame
@@ -172,6 +173,8 @@
             this.Name = "uscGame";
             this.Size = new System.Drawing.Size(802, 660);
             this.Load += new System.EventHandler(this.uscGame_Load);
+            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.uscGame_MouseClick);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.uscGame_MouseMove);
             ((System.ComponentModel.ISupportInitialize)(this.picBall)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPlatform)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLife)).EndInit();
