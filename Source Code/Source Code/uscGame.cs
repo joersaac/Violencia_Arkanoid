@@ -77,5 +77,58 @@ namespace Source_Code
             picBall.Top = picPlatform.Top - picBall.Height;
             picBall.Left = Convert.ToInt32((this.ClientSize.Width / 2) - (picBall.Width / 2));
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            picBall.Top += ControlBall.vSpeed;
+            picBall.Left += ControlBall.hSpeed;
+
+            if (picBall.Bottom > this.ClientSize.Height)
+            {
+                //si la pelorta toca el fondo se resta una vida y la velocidad horizontal se vuelve 0
+                ControlBall.hSpeed = 0;
+                ControlJuego.vidas = ControlJuego.vidas - 1;
+                lblLives.Text = $"X {ControlJuego.vidas}";
+                //Si ya no se cuentan con vidas el juego termina
+                if (ControlJuego.vidas == 0)
+                {
+                    ControlBall.vSpeed = 0;
+                    ControlBall.hSpeed = 0;
+                    timer1.Enabled = false;
+                    //timer2.Enabled = false;
+                    ControlJuego.timer = 0;
+                    MessageBox.Show($"GAME OVER");
+                }
+
+                //se detienen los timers 1 y 2 y se reinician las posiciones de la plataforma y la pelota
+                //timer2.Enabled = false;
+                timer1.Enabled = false;
+
+                reloadPosition();
+            }
+
+            if (picBall.Top < picStats.Height)
+            {
+                //si la pelota se choca con el limte superior se invertira el valor de velocidad vertical
+                ControlBall.vSpeed *= -1;
+            }
+
+            if (picBall.Right >= this.ClientSize.Width)
+            {
+                //Si la pelota se choca con el limte derecho se invertira el valor de velocidad horizontal
+                //Ademas para evitar bugs se procurar que la pelota siempre este adentro de los limites
+                ControlBall.hSpeed *= -1;
+                picBall.Left = this.ClientSize.Width - (picBall.Width + 1);
+            }
+
+            if (picBall.Left <= 0)
+            {
+                //Si la pelota se choca con el limte izquierdo se invertira el valor de velocidad horizontal
+                //Ademas para evitar bugs se procurar que la pelota siempre este adentro de los limites
+                ControlBall.hSpeed *= -1;
+                picBall.Left = 1;
+            }
+
+        }
     }
 }

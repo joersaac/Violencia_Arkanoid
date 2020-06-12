@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uscGame));
             this.lblMessage = new System.Windows.Forms.Label();
             this.picBall = new System.Windows.Forms.PictureBox();
@@ -38,6 +39,7 @@
             this.lblLives = new System.Windows.Forms.Label();
             this.lblScore = new System.Windows.Forms.Label();
             this.picStats = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.picBall)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPlatform)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLife)).BeginInit();
@@ -149,6 +151,10 @@
             this.picStats.TabIndex = 12;
             this.picStats.TabStop = false;
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // uscGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -185,5 +191,6 @@
         private System.Windows.Forms.Label lblLives;
         private System.Windows.Forms.Label lblScore;
         private System.Windows.Forms.PictureBox picStats;
+        private System.Windows.Forms.Timer timer1;
     }
 }
