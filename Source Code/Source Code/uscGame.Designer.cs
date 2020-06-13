@@ -177,7 +177,6 @@
             this.Controls.Add(this.picPlatform);
             this.Name = "uscGame";
             this.Size = new System.Drawing.Size(802, 660);
-            this.Load += new System.EventHandler(this.uscGame_Load);
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.uscGame_MouseClick);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.uscGame_MouseMove);
             ((System.ComponentModel.ISupportInitialize)(this.picBall)).EndInit();

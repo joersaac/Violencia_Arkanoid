@@ -29,7 +29,7 @@ namespace Source_Code
             blocks = new Block[ControlJuego.row, ControlJuego.col];
         }
 
-        private void uscGame_Load(object sender, EventArgs e)
+        public void Load()
         {
             //se establece la posicion de la plataforma, pelota  y la barra que contendra las estdisticas
             picPlatform.Width = Convert.ToInt32(this.ClientSize.Width/ ControlJuego.col);
@@ -68,6 +68,7 @@ namespace Source_Code
                 }
             }
         }
+
         private void reloadPosition()
         {
             //Se coloca el valor de started en false y se recolocan a la plataforma y la bola

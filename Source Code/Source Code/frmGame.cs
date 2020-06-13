@@ -22,7 +22,10 @@ namespace Source_Code
 
         private void frmGame_Load(object sender, EventArgs e)
         {
-
+            uscGame juego = new uscGame();
+            juego.Dock = System.Windows.Forms.DockStyle.Fill;
+            tableLayoutPanel1.Controls.Add(juego, 1, 0);
+            juego.Load();
         }
     }
 }

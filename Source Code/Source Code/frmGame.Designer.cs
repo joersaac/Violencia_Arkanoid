@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.uscGame1 = new Source_Code.uscGame();
-            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -40,7 +38,6 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.Controls.Add(this.uscGame1, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -48,15 +45,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(920, 594);
             this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // uscGame1
-            // 
-            this.uscGame1.BackColor = System.Drawing.Color.PaleGreen;
-            this.uscGame1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uscGame1.Location = new System.Drawing.Point(187, 3);
-            this.uscGame1.Name = "uscGame1";
-            this.uscGame1.Size = new System.Drawing.Size(546, 588);
-            this.uscGame1.TabIndex = 0;
             // 
             // frmGame
             // 
@@ -67,7 +55,6 @@
             this.Name = "frmGame";
             this.Text = "frmGame";
             this.Load += new System.EventHandler(this.frmGame_Load);
-            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -75,6 +62,5 @@
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private uscGame uscGame1;
     }
 }
