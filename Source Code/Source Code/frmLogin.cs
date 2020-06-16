@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Data;
 using System.Windows.Forms;
 
 namespace Source_Code
@@ -39,9 +41,34 @@ namespace Source_Code
 
         private void button1_Click(object sender, EventArgs e)
         {
+            var playerNickname = new List<string>();
+            try
+            {
+                var dt = ConectionDB.ExecuteQuery("SELECT nickname FROM PLAYER");
+                bool found = false;
+                foreach (DataRow dr in dt.Rows)
+                {
+                    if (dr[0].ToString().Equals(textBox1.Text))
+                    {
+                        found = true;
+                        break;
+                    }
+                }
+                if (!found)
+                {
+
+                    ConectionDB.ExecuteNonQuery($"INSERT INTO PLAYER(nickname) VALUES ('{textBox1.Text}')");
+                }
+            }
+            catch
+            {
+                MessageBox.Show("ha ocurrido un error");
+            }
+
             frmGame Game = new frmGame();
             Hide();
             Game.Show();
+        
         }
     }
 }
