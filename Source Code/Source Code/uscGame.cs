@@ -104,37 +104,7 @@ namespace Source_Code
 
             if (picBall.Bottom > this.ClientSize.Height)
             {
-                //si la pelorta toca el fondo se resta una vida y la velocidad horizontal se vuelve 0
-                ControlBall.hSpeed = 0;
-                ControlJuego.vidas = ControlJuego.vidas - 1;
-                lblLives.Text = $"X {ControlJuego.vidas}";
-                //Si ya no se cuentan con vidas el juego termina
-                if (ControlJuego.vidas == 0)
-                {
-                    ControlBall.vSpeed = 0;
-                    ControlBall.hSpeed = 0;
-                    timer1.Enabled = false;
-                    timer2.Enabled = false;
-                    ControlJuego.timer = 0;
-                    
-                    //Se manda el puntaje del jugador a la base de datos
-                    try
-                    {
-                      ConectionDB.ExecuteNonQuery($"INSERT INTO PUNTAJE(puntaje, nickname) VALUES ('{(ControlJuego.score)}', '{ControlJuego.playerName}')");
-                    }
-                    catch
-                    {
-                        MessageBox.Show("Ha ocurrido un error!");
-                    }
-                    
-                    MessageBox.Show($"GAME OVER", "ARKANOID", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-
-                //se detienen los timers 1 y 2 y se reinician las posiciones de la plataforma y la pelota
-                timer2.Enabled = false;
-                timer1.Enabled = false;
-
-                ReloadPosition();
+                LoseLife();
             }
 
             if (picBall.Top < picStats.Height)
@@ -185,24 +155,27 @@ namespace Source_Code
         {
             if (ControlJuego.score == ControlJuego.total)
             {
-                //se paran los timers 1 y 2 y se reinician las pocisiones de la plataforma y la pelota
+                //se paran los timers 1 y 2
                 timer1.Enabled = false;
                 timer2.Enabled = false;
-                ReloadPosition();
-                lblMessage.Visible = true;
 
                 //se suma la bonificacion de tiempo tanto al puntaje como al puntaje total o maximo y
                 //se reinicia el tiempo
                 ControlJuego.score += ControlJuego.timer;
+                ControlJuego.score += ControlJuego.vidas * 1000;
                 lblScore.Text = $"SCORE: {ControlJuego.score}";
-                lblTime.Text = $"TIME: {ControlJuego.timer}";
 
-                //Se coloca la velocidad horizontal en 0 y la vertical en -2 y se reinician las posiciones de
-                //la plataforma y la pelota
-                ControlBall.vSpeed = -2;
-                ControlBall.hSpeed = 0;
-                ReloadPosition();
+                //Se manda el puntaje del jugador a la base de datos
+                try
+                {
+                    ConectionDB.ExecuteNonQuery($"INSERT INTO PUNTAJE(puntaje, nickname) VALUES ('{(ControlJuego.score)}', '{ControlJuego.playerName}')");
+                }
+                catch
+                {
+                    MessageBox.Show("Ha ocurrido un error!");
+                }
 
+                MessageBox.Show($"GAME OVER", "ARKANOID", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -219,5 +192,28 @@ namespace Source_Code
             }
         }
 
+        private void LoseLife()
+        { 
+            //si la pelorta toca el fondo se resta una vida y la velocidad horizontal se vuelve 0
+            ControlBall.hSpeed = 0;
+            ControlJuego.vidas = ControlJuego.vidas - 1;
+            lblLives.Text = $"X {ControlJuego.vidas}";
+            //Si ya no se cuentan con vidas el juego termina
+            if (ControlJuego.vidas == 0)
+            {
+                ControlBall.vSpeed = 0;
+                ControlBall.hSpeed = 0;
+                timer1.Enabled = false;
+                timer2.Enabled = false;
+                ControlJuego.timer = 0;
+
+            }
+
+            //se detienen los timers 1 y 2 y se reinician las posiciones de la plataforma y la pelota
+            timer2.Enabled = false;
+            timer1.Enabled = false;
+
+            ReloadPosition();
+        }
     }
 }
