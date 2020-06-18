@@ -56,7 +56,7 @@
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmGame";
             this.Text = "frmGame";
-            this.Load += new System.EventHandler(this.frmGame_Load);
+            this.Load += new System.EventHandler(this.FrmGame_Load);
             this.ResumeLayout(false);
         }
 

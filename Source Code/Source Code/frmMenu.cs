@@ -17,14 +17,14 @@ namespace Source_Code
             InitializeComponent();
         }
 
-        private void buttonPlay_Click_1(object sender, EventArgs e)
+        private void ButtonPlay_Click_1(object sender, EventArgs e)
         {
             frmLogin login = new frmLogin();
             Hide();
             login.Show();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void Button2_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("¿Seguro que deseas salir ?", "ARKANOID",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)

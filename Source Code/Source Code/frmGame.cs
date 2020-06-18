@@ -20,12 +20,12 @@ namespace Source_Code
             Width = Screen.PrimaryScreen.Bounds.Width;
         }
 
-        private void frmGame_Load(object sender, EventArgs e)
+        private void FrmGame_Load(object sender, EventArgs e)
         {
             uscGame juego = new uscGame();
             juego.Dock = System.Windows.Forms.DockStyle.Fill;
             tableLayoutPanel1.Controls.Add(juego, 1, 0);
-            juego.Load();
+            juego.LoadPosicion();
         }
     }
 }

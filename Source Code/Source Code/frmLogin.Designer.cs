@@ -74,7 +74,7 @@ namespace Source_Code
             this.button1.TabIndex = 5;
             this.button1.Text = "LOGIN";
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // frmLogin
             // 
@@ -89,8 +89,8 @@ namespace Source_Code
             this.Name = "frmLogin";
             this.Text = "frmLogin";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmLogin_FormClosing);
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmLogin_FormClosed);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmLogin_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmLogin_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
         }

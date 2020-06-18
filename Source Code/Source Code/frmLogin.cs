@@ -12,7 +12,7 @@ namespace Source_Code
             InitializeComponent();
         }
 
-        private void frmLogin_FormClosing(object sender, FormClosingEventArgs e)
+        private void FrmLogin_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (MessageBox.Show("¿Seguro que deseas salir?", "ARKANOID",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
@@ -34,12 +34,12 @@ namespace Source_Code
         }
 
 
-        private void frmLogin_FormClosed(object sender, FormClosedEventArgs e)
+        private void FrmLogin_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
             var playerNickname = new List<string>();
             try

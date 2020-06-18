@@ -52,7 +52,7 @@
             this.button2.TabIndex = 4;
             this.button2.Text = "SALIR";
             this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.Button2_Click);
             // 
             // button1
             // 
@@ -88,7 +88,7 @@
             this.buttonPlay.TabIndex = 3;
             this.buttonPlay.Text = "JUGAR";
             this.buttonPlay.UseVisualStyleBackColor = false;
-            this.buttonPlay.Click += new System.EventHandler(this.buttonPlay_Click_1);
+            this.buttonPlay.Click += new System.EventHandler(this.ButtonPlay_Click_1);
             // 
             // pictureBox1
             // 

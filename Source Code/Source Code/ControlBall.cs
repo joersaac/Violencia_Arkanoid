@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Source_Code
@@ -10,8 +6,6 @@ namespace Source_Code
     class ControlBall
     {
         //Velocidad horizontal y vertical
-        private static int _vSpeed, _hSpeed;
-
         public static int vSpeed { get; set; }
         public static int hSpeed { get; set; }
         public static bool colisiones(PictureBox ball, Block block)
@@ -20,7 +14,7 @@ namespace Source_Code
             if (ball.Bounds.IntersectsWith(block.Bounds) && block.Visible)
             {
                 //se reduce la durabilidad del bloque en 1
-                block.hitPoints = block.hitPoints - 1;
+                block.HitPoints = block.HitPoints - 1;
 
                 //Si la velocidad horizontal es 0 se le da un valor de manera aleatoria entre -1 y 1
                 if (hSpeed != 0)
@@ -45,16 +39,16 @@ namespace Source_Code
                 }
 
 
-                if (block.hitPoints == 0)
+                if (block.HitPoints == 0)
                 {
                     //Si los hitpoints del bloque llegan a 0 se eliminara el bloque y sumaran los puntos al score
                     block.Visible = false;
-                    ControlJuego.score += block.puntos;
+                    ControlJuego.score += block.Puntos;
                     block = null;
                 }
                 else
                     //en caso el bloque tenga mas hitpoints se cambiara la imagen del mismo
-                    block.imageSetter();
+                    block.ImageSetter();
                 return true;
             }
             return false;
