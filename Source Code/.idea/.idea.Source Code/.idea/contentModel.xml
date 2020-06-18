@@ -21,8 +21,12 @@
         <e p="frmMenu.cs" t="Include" />
         <e p="frmMenu.Designer.cs" t="Include" />
         <e p="frmMenu.resx" t="Include" />
+        <e p="frmTop.cs" t="Include" />
+        <e p="frmTop.Designer.cs" t="Include" />
+        <e p="frmTop.resx" t="Include" />
         <e p="obj" t="ExcludeRecursive" />
         <e p="packages.config" t="Include" />
+        <e p="Player.cs" t="Include" />
         <e p="Program.cs" t="Include" />
         <e p="Properties" t="Include">
           <e p="AssemblyInfo.cs" t="Include" />
@@ -32,6 +36,7 @@
           <e p="Settings.settings" t="Include" />
         </e>
         <e p="Source Code.csproj" t="IncludeRecursive" />
+        <e p="TopController.cs" t="Include" />
         <e p="uscGame.cs" t="Include" />
         <e p="uscGame.Designer.cs" t="Include" />
         <e p="uscGame.resx" t="Include" />

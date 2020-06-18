@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 
 namespace Source_Code
 {
@@ -21,10 +22,10 @@ namespace Source_Code
 
             pictureBox1.Left = Convert.ToInt32(this.ClientSize.Width / 2 - pictureBox1.Width / 2);
             pictureBox1.Top = 104;
-            button1.Height = buttonPlay.Height = button2.Height = 64;
-            button1.Width = button2.Width = buttonPlay.Width = 320;
-            buttonPlay.Left = button2.Left = button1.Left = Convert.ToInt32(this.ClientSize.Width /2 - 161);
-            button1.Top = buttonPlay.Top + 96;
+            btnTop.Height = buttonPlay.Height = button2.Height = 64;
+            btnTop.Width = button2.Width = buttonPlay.Width = 320;
+            buttonPlay.Left = button2.Left = btnTop.Left = Convert.ToInt32(this.ClientSize.Width /2 - 161);
+            btnTop.Top = buttonPlay.Top + 96;
             button2.Top = buttonPlay.Top + 192;
 
         }
@@ -52,8 +53,14 @@ namespace Source_Code
             }
 
         }
-        
-        
+
+
+        private void btnTop_Click(object sender, EventArgs e)
+        {
+            //Mostrar la ventana del top jugadores
+            frmTop top = new frmTop();
+            top.Show();
+        }
         
     }
 }
