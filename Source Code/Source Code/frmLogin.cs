@@ -51,13 +51,19 @@ namespace Source_Code
                     if (dr[0].ToString().Equals(textBox1.Text))
                     {
                         found = true;
+                        
+                        //Hacer que la variable playerName sea igual que el nombre
+                        ControlJuego.playerName = textBox1.Text;
+                        
                         break;
                     }
                 }
                 if (!found)
                 {
-
                     ConectionDB.ExecuteNonQuery($"INSERT INTO PLAYER(nickname) VALUES ('{textBox1.Text}')");
+                    
+                    //Hacer que la variable playerName sea igual que el nombre
+                    ControlJuego.playerName = textBox1.Text;
                 }
             }
             catch

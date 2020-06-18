@@ -38,6 +38,8 @@ namespace Source_Code
             picLife.Top = 10;
             picStats.Width = this.ClientSize.Width;
             setBlocks();
+            //Label que muestra el nombre del jugador
+            lblName.Text = $"NAME: {ControlJuego.playerName}";
         }
 
         private void setBlocks()
@@ -115,7 +117,18 @@ namespace Source_Code
                     timer1.Enabled = false;
                     timer2.Enabled = false;
                     ControlJuego.timer = 0;
-                    MessageBox.Show($"GAME OVER");
+                    
+                    //Se manda el puntaje del jugador a la base de datos
+                    try
+                    {
+                      ConectionDB.ExecuteNonQuery($"INSERT INTO PUNTAJE(puntaje, nickname) VALUES ('{(ControlJuego.score)}', '{ControlJuego.playerName}')");
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Ha ocurrido un error!");
+                    }
+                    
+                    MessageBox.Show($"GAME OVER", "ARKANOID", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 
                 //se detienen los timers 1 y 2 y se reinician las posiciones de la plataforma y la pelota
