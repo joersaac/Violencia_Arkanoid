@@ -207,6 +207,7 @@ namespace Source_Code
                 timer2.Enabled = false;
                 ControlJuego.timer = 0;
 
+                MessageBox.Show($"GAME OVER", "ARKANOID", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
             //se detienen los timers 1 y 2 y se reinician las posiciones de la plataforma y la pelota
