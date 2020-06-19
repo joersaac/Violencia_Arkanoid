@@ -7,12 +7,14 @@ namespace Source_Code
 {
     public partial class frmLogin : Form
     {
+        private frmGame Game = new frmGame();
         public frmLogin()
         {
+            Game = new frmGame();
             InitializeComponent();
         }
 
-        private void FrmLogin_FormClosing(object sender, FormClosingEventArgs e)
+        /*private void FrmLogin_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (MessageBox.Show("¿Seguro que deseas salir?", "ARKANOID",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
@@ -37,7 +39,7 @@ namespace Source_Code
         private void FrmLogin_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
-        }
+        }*/
 
         private void Button1_Click(object sender, EventArgs e)
         {
@@ -71,9 +73,10 @@ namespace Source_Code
                 MessageBox.Show("ha ocurrido un error");
             }
 
-            frmGame Game = new frmGame();
-            Hide();
-            Game.Show();
+            
+            this.Hide();
+            Game.ShowDialog();
+            this.Close();
         
         }
     }

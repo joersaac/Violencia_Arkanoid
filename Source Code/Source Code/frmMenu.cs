@@ -13,8 +13,12 @@ namespace Source_Code
 {
     public partial class frmMenu : Form
     {
+        private frmLogin login;
+        private frmTop top;
         public frmMenu()
         {
+            login = new frmLogin();
+            top = new frmTop();
             InitializeComponent();
             WindowState = FormWindowState.Maximized;
             Height = Screen.PrimaryScreen.Bounds.Height;
@@ -32,9 +36,9 @@ namespace Source_Code
 
         private void ButtonPlay_Click_1(object sender, EventArgs e)
         {
-            frmLogin login = new frmLogin();
-            Hide();
-            login.Show();
+            this.Hide();
+            login.ShowDialog();
+            this.Show();
         }
 
         private void Button2_Click(object sender, EventArgs e)
@@ -47,19 +51,20 @@ namespace Source_Code
                 Application.Exit();
                
             }
-            else
-            {
-                
-            }
-
         }
 
 
         private void btnTop_Click(object sender, EventArgs e)
         {
             //Mostrar la ventana del top jugadores
-            frmTop top = new frmTop();
-            top.Show();
+            Hide();
+            top.ShowDialog();
+            Show();
+        }
+        
+        private void exitAction(EventArgs e)
+        {
+            Hide();
         }
         
     }

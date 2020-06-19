@@ -12,6 +12,7 @@ namespace Source_Code
 {
     public partial class frmGame : Form
     {
+        private uscGame juego = new uscGame();
         public frmGame()
         {
             InitializeComponent();
@@ -22,10 +23,17 @@ namespace Source_Code
 
         private void FrmGame_Load(object sender, EventArgs e)
         {
-            uscGame juego = new uscGame();
+            juego = new uscGame();
             juego.Dock = System.Windows.Forms.DockStyle.Fill;
             tableLayoutPanel1.Controls.Add(juego, 1, 0);
             juego.LoadPosicion();
+            juego.exit += closeWindow;
+        }
+        private void closeWindow(object sender, EventArgs e)
+        {
+            juego = null;
+            tableLayoutPanel1.Controls.Remove(juego);
+            Close();
         }
     }
 }

@@ -12,6 +12,8 @@ namespace Source_Code
 {
     public partial class uscGame : UserControl
     {
+        public delegate void exitEvent(object sender, EventArgs e);
+        public exitEvent exit;
         private Block[,] blocks;
         public uscGame()
         {
@@ -104,7 +106,8 @@ namespace Source_Code
 
             if (picBall.Bottom > this.ClientSize.Height)
             {
-                LoseLife();
+                if(LoseLife())
+                    exit?.Invoke(this, e);
             }
 
             if (picBall.Top < picStats.Height)
@@ -132,7 +135,8 @@ namespace Source_Code
             //Se miran las colisiones con la plataforma/jugador
             ControlBall.ColisionPlat(picBall, picPlatform);
 
-            LevelFinished();
+            if(LevelFinished())
+                exit?.Invoke(this, e);
         }
 
         private void UscGame_MouseClick(object sender, MouseEventArgs e)
@@ -151,7 +155,7 @@ namespace Source_Code
                 picPlatform.Left = e.X - (picPlatform.Width / 2);
         }
 
-        private void LevelFinished()
+        private bool LevelFinished()
         {
             if (ControlJuego.score == ControlJuego.total)
             {
@@ -176,7 +180,10 @@ namespace Source_Code
                 }
 
                 MessageBox.Show($"GAME OVER", "ARKANOID", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return true;
             }
+
+            return false;
         }
 
         private void Timer2_Tick(object sender, EventArgs e)
@@ -192,7 +199,7 @@ namespace Source_Code
             }
         }
 
-        private void LoseLife()
+        private bool LoseLife()
         { 
             //si la pelorta toca el fondo se resta una vida y la velocidad horizontal se vuelve 0
             ControlBall.hSpeed = 0;
@@ -208,6 +215,7 @@ namespace Source_Code
                 ControlJuego.timer = 0;
 
                 MessageBox.Show($"GAME OVER", "ARKANOID", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return true;
             }
 
             //se detienen los timers 1 y 2 y se reinician las posiciones de la plataforma y la pelota
@@ -215,6 +223,7 @@ namespace Source_Code
             timer1.Enabled = false;
 
             ReloadPosition();
+            return false;
         }
     }
 }
