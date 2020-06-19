@@ -61,11 +61,5 @@ namespace Source_Code
             top.ShowDialog();
             Show();
         }
-        
-        private void exitAction(EventArgs e)
-        {
-            Hide();
-        }
-        
     }
 }

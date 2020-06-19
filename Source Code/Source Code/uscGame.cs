@@ -203,6 +203,7 @@ namespace Source_Code
         { 
             //si la pelorta toca el fondo se resta una vida y la velocidad horizontal se vuelve 0
             ControlBall.hSpeed = 0;
+            ControlBall.vSpeed = -2;
             ControlJuego.vidas = ControlJuego.vidas - 1;
             lblLives.Text = $"X {ControlJuego.vidas}";
             //Si ya no se cuentan con vidas el juego termina
