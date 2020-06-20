@@ -39,23 +39,25 @@ namespace Source_Code
             // 
             this.lblTop.AutoSize = true;
             this.lblTop.BackColor = System.Drawing.Color.Transparent;
-            this.lblTop.Font = new System.Drawing.Font("Verdana", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.lblTop.Font = new System.Drawing.Font("Verdana", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTop.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblTop.Location = new System.Drawing.Point(185, 27);
+            this.lblTop.Location = new System.Drawing.Point(259, 55);
+            this.lblTop.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTop.Name = "lblTop";
-            this.lblTop.Size = new System.Drawing.Size(144, 42);
+            this.lblTop.Size = new System.Drawing.Size(221, 65);
             this.lblTop.TabIndex = 0;
             this.lblTop.Text = "TOP 10";
             // 
             // frmTop
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(498, 561);
+            this.ClientSize = new System.Drawing.Size(747, 863);
             this.Controls.Add(this.lblTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.Name = "frmTop";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -63,6 +65,7 @@ namespace Source_Code
             this.Load += new System.EventHandler(this.frmTop_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         private System.Windows.Forms.Label lblTop;
