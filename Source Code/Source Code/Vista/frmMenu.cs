@@ -15,11 +15,13 @@ namespace Source_Code
     {
         private frmLogin login;
         private frmTop top;
+
         public frmMenu()
         {
             login = new frmLogin();
             top = new frmTop();
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
             WindowState = FormWindowState.Maximized;
             Height = Screen.PrimaryScreen.Bounds.Height;
             Width = Screen.PrimaryScreen.Bounds.Width;

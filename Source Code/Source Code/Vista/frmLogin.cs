@@ -12,7 +12,8 @@ namespace Source_Code
         public frmLogin()
         {
             Game = new frmGame();
-            InitializeComponent();
+            InitializeComponent(); 
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
         }
 
         /*private void FrmLogin_FormClosing(object sender, FormClosingEventArgs e)

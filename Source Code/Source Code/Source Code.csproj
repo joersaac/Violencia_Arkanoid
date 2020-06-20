@@ -88,56 +88,56 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Block.cs">
+    <Compile Include="Modelo\Block.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="ConectionDB.cs" />
-    <Compile Include="ControlBall.cs" />
-    <Compile Include="ControlJuego.cs" />
-    <Compile Include="frmGame.cs">
+    <Compile Include="Controlador\ConectionDB.cs" />
+    <Compile Include="Controlador\ControlBall.cs" />
+    <Compile Include="Controlador\ControlJuego.cs" />
+    <Compile Include="Vista\frmGame.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmGame.Designer.cs">
+    <Compile Include="Vista\frmGame.Designer.cs">
       <DependentUpon>frmGame.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmLogin.cs">
+    <Compile Include="Vista\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLogin.Designer.cs">
+    <Compile Include="Vista\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMenu.cs">
+    <Compile Include="Vista\frmMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMenu.Designer.cs">
+    <Compile Include="Vista\frmMenu.Designer.cs">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmTop.cs">
+    <Compile Include="Vista\frmTop.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmTop.Designer.cs">
+    <Compile Include="Vista\frmTop.Designer.cs">
       <DependentUpon>frmTop.cs</DependentUpon>
     </Compile>
-    <Compile Include="Player.cs" />
+    <Compile Include="Modelo\Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TopController.cs" />
-    <Compile Include="uscGame.cs">
+    <Compile Include="Controlador\TopController.cs" />
+    <Compile Include="Vista\uscGame.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="uscGame.Designer.cs">
+    <Compile Include="Vista\uscGame.Designer.cs">
       <DependentUpon>uscGame.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="frmGame.resx">
+    <EmbeddedResource Include="Vista\frmGame.resx">
       <DependentUpon>frmGame.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmLogin.resx">
+    <EmbeddedResource Include="Vista\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMenu.resx">
+    <EmbeddedResource Include="Vista\frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmTop.resx">
+    <EmbeddedResource Include="Vista\frmTop.resx">
       <DependentUpon>frmTop.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -149,7 +149,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="uscGame.resx">
+    <EmbeddedResource Include="Vista\uscGame.resx">
       <DependentUpon>uscGame.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
