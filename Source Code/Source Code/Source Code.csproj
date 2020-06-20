@@ -88,6 +88,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controlador\NoRemainingLivesException.cs" />
+    <Compile Include="Controlador\OutOfBoundsException.cs" />
+    <Compile Include="Controlador\WrongClickException.cs" />
     <Compile Include="Modelo\Block.cs">
       <SubType>Component</SubType>
     </Compile>

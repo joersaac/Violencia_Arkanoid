@@ -51,13 +51,13 @@
             // 
             this.lblMessage.AutoSize = true;
             this.lblMessage.BackColor = System.Drawing.Color.Transparent;
-            this.lblMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMessage.ForeColor = System.Drawing.Color.Black;
+            this.lblMessage.Font = new System.Drawing.Font("Niagara Solid", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMessage.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.lblMessage.Location = new System.Drawing.Point(288, 418);
             this.lblMessage.Name = "lblMessage";
-            this.lblMessage.Size = new System.Drawing.Size(240, 26);
+            this.lblMessage.Size = new System.Drawing.Size(405, 60);
             this.lblMessage.TabIndex = 9;
-            this.lblMessage.Text = "Has click para empezar";
+            this.lblMessage.Text = "Click izquierdo para empezar";
             // 
             // picBall
             // 
