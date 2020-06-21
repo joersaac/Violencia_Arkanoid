@@ -1,6 +1,6 @@
 ﻿namespace Source_Code
 {
-    partial class frmMenu
+    partial class FrmMenu
     {
         /// <summary>
         /// Required designer variable.
@@ -28,33 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu));
-            this.button2 = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMenu));
+            this.btnExit = new System.Windows.Forms.Button();
             this.btnTop = new System.Windows.Forms.Button();
-            this.buttonPlay = new System.Windows.Forms.Button();
+            this.btnPlay = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // button2
+            // btnExit
             // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button2.BackColor = System.Drawing.Color.Black;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
-            this.button2.Font = new System.Drawing.Font("Niagara Solid", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.PaleGreen;
-            this.button2.Location = new System.Drawing.Point(315, 575);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(334, 77);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "SALIR";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.Button2_Click);
+            this.btnExit.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnExit.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnExit.BackColor = System.Drawing.Color.Black;
+            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
+            this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.btnExit.Font = new System.Drawing.Font("Niagara Solid", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.ForeColor = System.Drawing.Color.PaleGreen;
+            this.btnExit.Location = new System.Drawing.Point(315, 575);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(334, 77);
+            this.btnExit.TabIndex = 4;
+            this.btnExit.Text = "SALIR";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
             // btnTop
             // 
@@ -74,27 +74,27 @@
             this.btnTop.TabIndex = 2;
             this.btnTop.Text = "TOP 10";
             this.btnTop.UseVisualStyleBackColor = false;
-            this.btnTop.Click += new System.EventHandler(this.btnTop_Click);
+            this.btnTop.Click += new System.EventHandler(this.BtnTop_Click);
             // 
-            // buttonPlay
+            // btnPlay
             // 
-            this.buttonPlay.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonPlay.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.buttonPlay.BackColor = System.Drawing.Color.Black;
-            this.buttonPlay.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonPlay.FlatAppearance.BorderSize = 0;
-            this.buttonPlay.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
-            this.buttonPlay.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.buttonPlay.Font = new System.Drawing.Font("Niagara Solid", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonPlay.ForeColor = System.Drawing.Color.PaleGreen;
-            this.buttonPlay.Location = new System.Drawing.Point(315, 349);
-            this.buttonPlay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonPlay.Name = "buttonPlay";
-            this.buttonPlay.Size = new System.Drawing.Size(334, 77);
-            this.buttonPlay.TabIndex = 3;
-            this.buttonPlay.Text = "JUGAR";
-            this.buttonPlay.UseVisualStyleBackColor = false;
-            this.buttonPlay.Click += new System.EventHandler(this.ButtonPlay_Click_1);
+            this.btnPlay.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnPlay.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnPlay.BackColor = System.Drawing.Color.Black;
+            this.btnPlay.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPlay.FlatAppearance.BorderSize = 0;
+            this.btnPlay.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
+            this.btnPlay.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btnPlay.Font = new System.Drawing.Font("Niagara Solid", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPlay.ForeColor = System.Drawing.Color.PaleGreen;
+            this.btnPlay.Location = new System.Drawing.Point(315, 349);
+            this.btnPlay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPlay.Name = "btnPlay";
+            this.btnPlay.Size = new System.Drawing.Size(334, 77);
+            this.btnPlay.TabIndex = 3;
+            this.btnPlay.Text = "JUGAR";
+            this.btnPlay.UseVisualStyleBackColor = false;
+            this.btnPlay.Click += new System.EventHandler(this.BtnPlay_Click);
             // 
             // pictureBox1
             // 
@@ -116,9 +116,9 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(988, 734);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnTop);
-            this.Controls.Add(this.buttonPlay);
+            this.Controls.Add(this.btnPlay);
             this.Name = "frmMenu";
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -128,8 +128,8 @@
         }
 
         private System.Windows.Forms.Button btnTop;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button buttonPlay;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnPlay;
         private System.Windows.Forms.PictureBox pictureBox1;
 
         #endregion

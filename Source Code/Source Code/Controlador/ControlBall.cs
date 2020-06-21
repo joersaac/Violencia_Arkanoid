@@ -8,7 +8,7 @@ namespace Source_Code
         //Velocidad horizontal y vertical
         public static int vSpeed { get; set; }
         public static int hSpeed { get; set; }
-        public static bool colisiones(PictureBox ball, Block block)
+        public static bool BlockCollision(PictureBox ball, Block block)
         {
             //Se observa si hay colisiones con los bloques
             if (ball.Bounds.IntersectsWith(block.Bounds) && block.Visible)
@@ -54,7 +54,7 @@ namespace Source_Code
             return false;
         }
 
-        public static void ColisionPlat(PictureBox ball, PictureBox platform)
+        public static void PlatformCollision(PictureBox ball, PictureBox platform)
         {
             //Esta funcion es para comprobar la colision con la plataforma 
             if (ball.Bounds.IntersectsWith(platform.Bounds))

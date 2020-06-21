@@ -3,49 +3,23 @@ using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
+using Npgsql;
 using Source_Code.Controlador;
 
 namespace Source_Code
 {
-    public partial class frmLogin : Form
+    public partial class FrmLogin : Form
     {
-        private frmMenu Menu;
-        private frmGame Game = new frmGame();
-        public frmLogin()
+        private FrmMenu Menu;
+        private FrmGame Game = new FrmGame();
+        public FrmLogin()
         {
-            Game = new frmGame();
+            Game = new FrmGame();
             InitializeComponent(); 
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
         }
 
-        /*private void FrmLogin_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (MessageBox.Show("¿Seguro que deseas salir?", "ARKANOID",
-                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
-            {
-                e.Cancel = true;
-            }
-            else
-            {
-                try
-                {
-                    e.Cancel = false;
-                }
-                catch (Exception)
-                {
-                    MessageBox.Show("Ha sucedido un error, intente dentro de un minuto!", "ARKANOID",
-                        MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }  
-        }
-
-
-        private void FrmLogin_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
-        }*/
-
-        private void Button1_Click(object sender, EventArgs e)
+        private void BtnLogin_Click(object sender, EventArgs e)
         {
             var playerNickname = new List<string>();
             try
@@ -94,10 +68,9 @@ namespace Source_Code
             {
                 MessageBox.Show(ex.Message);
             }
-
         }
 
-        private void frmLogin_Load(object sender, EventArgs e)
+        private void FrmLogin_Load(object sender, EventArgs e)
         {
             pictureBox1.Image = Image.FromFile("../../Resorces/Buttons layaout.png");
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -122,9 +95,9 @@ namespace Source_Code
 
         }
 
-        private void btnReturn_Click(object sender, EventArgs e)
+        private void BtnReturn_Click(object sender, EventArgs e)
         {
-            Menu = new frmMenu();
+            Menu = new FrmMenu();
             this.Close();
             Menu.ShowDialog();
         }

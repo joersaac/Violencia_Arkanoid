@@ -3,15 +3,15 @@ using System.Windows.Forms;
 
 namespace Source_Code
 {
-    public partial class frmMenu : Form
+    public partial class FrmMenu : Form
     {
-        private frmLogin login;
-        private frmTop top;
+        private FrmLogin login;
+        private FrmTop top;
 
-        public frmMenu()
+        public FrmMenu()
         {
-            login = new frmLogin();
-            top = new frmTop();
+            login = new FrmLogin();
+            top = new FrmTop();
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             WindowState = FormWindowState.Maximized;
@@ -20,22 +20,22 @@ namespace Source_Code
 
             pictureBox1.Left = Convert.ToInt32(this.ClientSize.Width / 2 - pictureBox1.Width / 2);
             pictureBox1.Top = 104;
-            btnTop.Height = buttonPlay.Height = button2.Height = 64;
-            btnTop.Width = button2.Width = buttonPlay.Width = 320;
-            buttonPlay.Left = button2.Left = btnTop.Left = Convert.ToInt32(this.ClientSize.Width /2 - 161);
-            btnTop.Top = buttonPlay.Top + 96;
-            button2.Top = buttonPlay.Top + 192;
+            btnTop.Height = btnPlay.Height = btnExit.Height = 64;
+            btnTop.Width = btnExit.Width = btnPlay.Width = 320;
+            btnPlay.Left = btnExit.Left = btnTop.Left = Convert.ToInt32(this.ClientSize.Width /2 - 161);
+            btnTop.Top = btnPlay.Top + 96;
+            btnExit.Top = btnPlay.Top + 192;
 
         }
 
-        private void ButtonPlay_Click_1(object sender, EventArgs e)
+        private void BtnPlay_Click(object sender, EventArgs e)
         {
             this.Hide();
             login.ShowDialog();
             this.Show();
         }
 
-        private void Button2_Click(object sender, EventArgs e)
+        private void BtnExit_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("¿Seguro que deseas salir ?", "ARKANOID",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -48,7 +48,7 @@ namespace Source_Code
         }
 
 
-        private void btnTop_Click(object sender, EventArgs e)
+        private void BtnTop_Click(object sender, EventArgs e)
         {
             //Mostrar la ventana del top jugadores
             Hide();

@@ -1,6 +1,6 @@
 ﻿namespace Source_Code
 {
-    partial class frmGame
+    partial class FrmGame
     {
         /// <summary>
         /// Required designer variable.
@@ -54,7 +54,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "frmGame";
             this.Text = "frmGame";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmGame_FormClosing);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmGame_FormClosing);
             this.Load += new System.EventHandler(this.FrmGame_Load);
             this.ResumeLayout(false);
 

@@ -1,6 +1,6 @@
 ﻿namespace Source_Code
 {
-    partial class uscGame
+    partial class UscGame
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uscGame));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UscGame));
             this.lblMessage = new System.Windows.Forms.Label();
             this.picBall = new System.Windows.Forms.PictureBox();
             this.picPlatform = new System.Windows.Forms.PictureBox();

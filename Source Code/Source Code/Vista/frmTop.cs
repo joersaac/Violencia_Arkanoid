@@ -4,17 +4,17 @@ using System.Windows.Forms;
 
 namespace Source_Code
 {
-    public partial class frmTop : Form
+    public partial class FrmTop : Form
     {
 
         private Label[,] players;
-        public frmTop()
+        public FrmTop()
         {
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
         }
 
-        private void frmTop_Load(object sender, EventArgs e)
+        private void FrmTop_Load(object sender, EventArgs e)
         {
             LoadPlayers();
         }

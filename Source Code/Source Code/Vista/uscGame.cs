@@ -4,13 +4,13 @@ using Source_Code.Controlador;
 
 namespace Source_Code
 {
-    public partial class uscGame : UserControl
+    public partial class UscGame : UserControl
     {
         public delegate void exitEvent(object sender, EventArgs e);
         public exitEvent exit;
         private Block[,] blocks;
 
-        public uscGame()
+        public UscGame()
         {
             InitializeComponent();
             ControlBall.vSpeed = -2;
@@ -87,7 +87,7 @@ namespace Source_Code
                     bool colision = false;
                     for (int y = 0; y < ControlJuego.col; y++)
                     {
-                        if (ControlBall.colisiones(picBall, blocks[x, y]))
+                        if (ControlBall.BlockCollision(picBall, blocks[x, y]))
                         {
                             lblScore.Text = $"SCORE: {ControlJuego.score}";
                             colision = true;
@@ -130,7 +130,7 @@ namespace Source_Code
                 }
 
                 //Se miran las colisiones con la plataforma/jugador
-                ControlBall.ColisionPlat(picBall, picPlatform);
+                ControlBall.PlatformCollision(picBall, picPlatform);
 
                 if (LevelFinished())
                     exit?.Invoke(this, e);

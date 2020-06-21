@@ -3,10 +3,10 @@ using System.Windows.Forms;
 
 namespace Source_Code
 {
-    public partial class frmGame : Form
+    public partial class FrmGame : Form
     {
-        private uscGame juego;
-        public frmGame()
+        private UscGame juego;
+        public FrmGame()
         {
             InitializeComponent();
             WindowState = FormWindowState.Maximized;
@@ -16,18 +16,18 @@ namespace Source_Code
 
         private void FrmGame_Load(object sender, EventArgs e)
         {
-            juego = new uscGame();
+            juego = new UscGame();
             juego.Dock = System.Windows.Forms.DockStyle.Fill;
             tableLayoutPanel1.Controls.Add(juego, 1, 0);
             juego.LoadPosicion();
-            juego.exit += closeWindow;
+            juego.exit += CloseWindow;
         }
-        private void closeWindow(object sender, EventArgs e)
+        private void CloseWindow(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void frmGame_FormClosing(object sender, FormClosingEventArgs e)
+        private void FrmGame_FormClosing(object sender, FormClosingEventArgs e)
         {
             tableLayoutPanel1.Controls.Remove(juego);
         }

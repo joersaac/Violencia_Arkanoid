@@ -2,7 +2,7 @@
 
 namespace Source_Code
 {
-    partial class frmLogin
+    partial class FrmLogin
     {
         /// <summary>
         /// Required designer variable.
@@ -32,7 +32,7 @@ namespace Source_Code
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources =
-                new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
+                new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
@@ -85,7 +85,7 @@ namespace Source_Code
             this.btnLogin.TabIndex = 5;
             this.btnLogin.Text = "LOGIN";
             this.btnLogin.UseVisualStyleBackColor = false;
-            this.btnLogin.Click += new System.EventHandler(this.Button1_Click);
+            this.btnLogin.Click += new System.EventHandler(this.BtnLogin_Click);
             // 
             // pictureBox1
             // 
@@ -112,7 +112,7 @@ namespace Source_Code
             this.btnReturn.TabIndex = 7;
             this.btnReturn.Text = "Return to main page";
             this.btnReturn.UseVisualStyleBackColor = false;
-            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
+            this.btnReturn.Click += new System.EventHandler(this.BtnReturn_Click);
             // 
             // frmLogin
             // 
@@ -129,7 +129,7 @@ namespace Source_Code
             this.Name = "frmLogin";
             this.Text = "frmLogin";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.frmLogin_Load);
+            this.Load += new System.EventHandler(this.FrmLogin_Load);
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

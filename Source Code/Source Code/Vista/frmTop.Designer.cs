@@ -2,7 +2,7 @@
 
 namespace Source_Code
 {
-    partial class frmTop
+    partial class FrmTop
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +31,7 @@ namespace Source_Code
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTop));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTop));
             this.lblTop = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -62,7 +62,7 @@ namespace Source_Code
             this.Name = "frmTop";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TOP";
-            this.Load += new System.EventHandler(this.frmTop_Load);
+            this.Load += new System.EventHandler(this.FrmTop_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
