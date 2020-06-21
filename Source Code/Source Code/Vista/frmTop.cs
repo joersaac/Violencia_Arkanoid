@@ -17,18 +17,25 @@ namespace Source_Code
         private void FrmTop_Load(object sender, EventArgs e)
         {
             LoadPlayers();
+
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            WindowState = FormWindowState.Maximized;
+
+            lblTop.Left = this.ClientSize.Width / 2 - lblTop.Width / 2;
         }
 
         private void LoadPlayers()
         {
             try
             {
+
                 var playerList = TopController.Top();
-                players = new Label[10, 2];
+                players = new Label[playerList.Count, 2];
 
-                int SampleTop = lblTop.Bottom + 25, SampleLeft = 65;
+                int SampleTop = lblTop.Bottom + 65, 
+                    SampleLeft = this.ClientSize.Width/2 + lblTop.Width;
 
-                for (int i = 0; i < 10; i++)
+                for (int i = 0; i < playerList.Count; i++)
                 {
                     for (int j = 0; j < 2; j++)
                     {
@@ -42,14 +49,13 @@ namespace Source_Code
                         else
                         {
                             players[i, j].Text = playerList[i].Score.ToString();
-                            players[i, j].Left = Width / 2 + SampleLeft;
+                            players[i, j].Left = Width + SampleLeft/2;
                         }
-
-                        players[i, j].Top = SampleTop + (SampleTop / 2) * i;
+                        players[i, j].Top = SampleTop + (SampleTop / 3)* i;
                         players[i, j].BackColor = Color.Transparent;
-                        players[i, j].Dock = DockStyle.None;
+                        //players[i, j].Dock = DockStyle.None;
                         players[i, j].AutoSize = true;
-                        players[i, j].Height += 5;
+                        players[i, j].Height += 3;
                         players[i, j].Font = lblTop.Font;
                         players[i, j].ForeColor = lblTop.ForeColor;
                         players[i, j].TextAlign = ContentAlignment.MiddleCenter;

@@ -48,18 +48,18 @@ namespace Source_Code
             this.lblTop.TabIndex = 0;
             this.lblTop.Text = "TOP 10";
             // 
-            // frmTop
+            // FrmTop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(747, 863);
+            this.ClientSize = new System.Drawing.Size(747, 1050);
             this.Controls.Add(this.lblTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
-            this.Name = "frmTop";
+            this.Name = "FrmTop";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TOP";
             this.Load += new System.EventHandler(this.FrmTop_Load);
