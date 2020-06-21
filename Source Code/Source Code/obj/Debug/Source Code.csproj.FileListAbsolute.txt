@@ -107,3 +107,4 @@ C:\Users\JOAQUIN SANTOS\Documents\Repositorios\Violencia_Arkanoid\Violencia_Arka
 C:\Users\JOAQUIN SANTOS\Documents\Repositorios\Violencia_Arkanoid\Violencia_Arkanoid\Source Code\Source Code\obj\Debug\Source Code.csproj.CopyComplete
 C:\Users\Wilfredo Josué\Documents\ARKANOID\Violencia_Arkanoid\Source Code\Source Code\obj\Debug\Source_Code.frmTop.resources
 C:\Users\JOAQUIN SANTOS\Documents\Repositorios\Violencia_Arkanoid\Violencia_Arkanoid\Source Code\Source Code\obj\Debug\Source_Code.frmTop.resources
+C:\Users\Axel Medina\Desktop\Proyecto_Poo\Violencia_Arkanoid\Source Code\Source Code\obj\Debug\Source_Code.frmTop.resources

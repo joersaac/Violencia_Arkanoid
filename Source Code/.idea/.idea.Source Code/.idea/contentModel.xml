@@ -8,25 +8,23 @@
       <e p="Source Code" t="IncludeRecursive">
         <e p="App.config" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
-        <e p="Block.cs" t="Include" />
-        <e p="ConectionDB.cs" t="Include" />
-        <e p="ControlBall.cs" t="Include" />
-        <e p="ControlJuego.cs" t="Include" />
-        <e p="frmGame.cs" t="Include" />
-        <e p="frmGame.Designer.cs" t="Include" />
-        <e p="frmGame.resx" t="Include" />
-        <e p="frmLogin.cs" t="Include" />
-        <e p="frmLogin.Designer.cs" t="Include" />
-        <e p="frmLogin.resx" t="Include" />
-        <e p="frmMenu.cs" t="Include" />
-        <e p="frmMenu.Designer.cs" t="Include" />
-        <e p="frmMenu.resx" t="Include" />
-        <e p="frmTop.cs" t="Include" />
-        <e p="frmTop.Designer.cs" t="Include" />
-        <e p="frmTop.resx" t="Include" />
+        <e p="Controlador" t="Include">
+          <e p="ConectionDB.cs" t="Include" />
+          <e p="ControlBall.cs" t="Include" />
+          <e p="ControlJuego.cs" t="Include" />
+          <e p="EmptyNicknameException.cs" t="Include" />
+          <e p="ExceededMaxCharacterException.cs" t="Include" />
+          <e p="NoRemainingLivesException.cs" t="Include" />
+          <e p="OutOfBoundsException.cs" t="Include" />
+          <e p="TopController.cs" t="Include" />
+          <e p="WrongClickException.cs" t="Include" />
+        </e>
+        <e p="Modelo" t="Include">
+          <e p="Block.cs" t="Include" />
+          <e p="Player.cs" t="Include" />
+        </e>
         <e p="obj" t="ExcludeRecursive" />
         <e p="packages.config" t="Include" />
-        <e p="Player.cs" t="Include" />
         <e p="Program.cs" t="Include" />
         <e p="Properties" t="Include">
           <e p="AssemblyInfo.cs" t="Include" />
@@ -36,10 +34,23 @@
           <e p="Settings.settings" t="Include" />
         </e>
         <e p="Source Code.csproj" t="IncludeRecursive" />
-        <e p="TopController.cs" t="Include" />
-        <e p="uscGame.cs" t="Include" />
-        <e p="uscGame.Designer.cs" t="Include" />
-        <e p="uscGame.resx" t="Include" />
+        <e p="Vista" t="Include">
+          <e p="frmGame.cs" t="Include" />
+          <e p="frmGame.Designer.cs" t="Include" />
+          <e p="frmGame.resx" t="Include" />
+          <e p="frmLogin.cs" t="Include" />
+          <e p="frmLogin.Designer.cs" t="Include" />
+          <e p="frmLogin.resx" t="Include" />
+          <e p="frmMenu.cs" t="Include" />
+          <e p="frmMenu.Designer.cs" t="Include" />
+          <e p="frmMenu.resx" t="Include" />
+          <e p="frmTop.cs" t="Include" />
+          <e p="frmTop.Designer.cs" t="Include" />
+          <e p="frmTop.resx" t="Include" />
+          <e p="uscGame.cs" t="Include" />
+          <e p="uscGame.Designer.cs" t="Include" />
+          <e p="uscGame.resx" t="Include" />
+        </e>
       </e>
       <e p="Source Code.sln" t="IncludeFlat" />
     </e>

@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
+using Source_Code.Controlador;
 
 namespace Source_Code
 {
     public partial class frmLogin : Form
     {
+        private frmMenu Menu;
         private frmGame Game = new frmGame();
         public frmLogin()
         {
@@ -48,38 +50,51 @@ namespace Source_Code
             var playerNickname = new List<string>();
             try
             {
-                var dt = ConectionDB.ExecuteQuery("SELECT nickname FROM PLAYER");
-                bool found = false;
-                foreach (DataRow dr in dt.Rows)
+                switch (textBox1.Text)
                 {
-                    if (dr[0].ToString().Equals(textBox1.Text))
-                    {
-                        found = true;
-                        
-                        //Hacer que la variable playerName sea igual que el nombre
-                        ControlJuego.playerName = textBox1.Text;
-                        
+                    case string aux when aux.Trim().Length == 0:
+                        throw new EmptyNicknameException("no puede dejar el campo vacio");
+                    case string aux when aux.Length > 15:
+                        throw new ExceededMaxCharactersException("no puede poner un nickname de mas de 15 chars");
+                    default:
+                        var dt = ConectionDB.ExecuteQuery("SELECT nickname FROM PLAYER");
+                        bool found = false;
+                        foreach (DataRow dr in dt.Rows)
+                        {
+                            if (dr[0].ToString().Equals(textBox1.Text))
+                            {
+                                found = true;
+
+                                //Hacer que la variable playerName sea igual que el nombre
+                                ControlJuego.playerName = textBox1.Text;
+
+                                break;
+                            }
+                        }
+
+                        if (!found)
+                        {
+                            ConectionDB.ExecuteNonQuery($"INSERT INTO PLAYER(nickname) VALUES ('{textBox1.Text}')");
+
+                            //Hacer que la variable playerName sea igual que el nombre
+                            ControlJuego.playerName = textBox1.Text;
+                        }
+
+                        this.Hide();
+                        Game.ShowDialog();
+                        this.Close();
                         break;
-                    }
-                }
-                if (!found)
-                {
-                    ConectionDB.ExecuteNonQuery($"INSERT INTO PLAYER(nickname) VALUES ('{textBox1.Text}')");
-                    
-                    //Hacer que la variable playerName sea igual que el nombre
-                    ControlJuego.playerName = textBox1.Text;
                 }
             }
-            catch
+            catch (EmptyNicknameException ex)
             {
-                MessageBox.Show("ha ocurrido un error");
+                MessageBox.Show(ex.Message);
+            }
+            catch (ExceededMaxCharactersException ex)
+            {
+                MessageBox.Show(ex.Message);
             }
 
-            
-            this.Hide();
-            Game.ShowDialog();
-            this.Close();
-        
         }
 
         private void frmLogin_Load(object sender, EventArgs e)
@@ -105,6 +120,13 @@ namespace Source_Code
             btnReturn.Left = pictureBox1.Right - btnReturn.Width;
             btnReturn.Top = 480;
 
+        }
+
+        private void btnReturn_Click(object sender, EventArgs e)
+        {
+            Menu = new frmMenu();
+            this.Close();
+            Menu.ShowDialog();
         }
     }
 }
