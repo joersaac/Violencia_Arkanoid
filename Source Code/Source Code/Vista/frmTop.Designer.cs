@@ -62,6 +62,7 @@ namespace Source_Code
             this.Name = "FrmTop";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TOP";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmTop_FormClosing);
             this.Load += new System.EventHandler(this.FrmTop_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -16,24 +16,24 @@ namespace Source_Code
 
         private void FrmTop_Load(object sender, EventArgs e)
         {
-            LoadPlayers();
-
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             WindowState = FormWindowState.Maximized;
 
+            players = new Label[10, 2];
+
             lblTop.Left = this.ClientSize.Width / 2 - lblTop.Width / 2;
+
+            LoadPlayers();
         }
 
         private void LoadPlayers()
         {
             try
             {
-
                 var playerList = TopController.Top();
-                players = new Label[playerList.Count, 2];
 
-                int SampleTop = lblTop.Bottom + 65, 
-                    SampleLeft = this.ClientSize.Width/2 + lblTop.Width;
+                int SampleTop = lblTop.Bottom + 65,
+                    SampleLeft = this.ClientSize.Width / 2;
 
                 for (int i = 0; i < playerList.Count; i++)
                 {
@@ -44,14 +44,14 @@ namespace Source_Code
                         if (j == 0)
                         {
                             players[i, j].Text = playerList[i].Nickname;
-                            players[i, j].Left = SampleLeft;
+                            players[i, j].Left = SampleLeft - 200;
                         }
                         else
                         {
                             players[i, j].Text = playerList[i].Score.ToString();
-                            players[i, j].Left = Width + SampleLeft/2;
+                            players[i, j].Left = SampleLeft +100;
                         }
-                        players[i, j].Top = SampleTop + (SampleTop / 3)* i;
+                        players[i, j].Top = SampleTop + (SampleTop / 3) * i;
                         players[i, j].BackColor = Color.Transparent;
                         //players[i, j].Dock = DockStyle.None;
                         players[i, j].AutoSize = true;
@@ -61,15 +61,28 @@ namespace Source_Code
                         players[i, j].TextAlign = ContentAlignment.MiddleCenter;
 
                         Controls.Add(players[i, j]);
-
                     }
                 }
             }
-            catch(Exception ex){
+            catch (Exception ex)
+            {
                 MessageBox.Show("Ha ocurrido un error");
             }
         }
-        
-        
+
+        private void FrmTop_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            var playerList = TopController.Top();
+
+            for (int i = 0; i < playerList.Count; i++)
+            {
+                for (int j = 0; j < 2; j++)
+                {
+                    Controls.Remove(players[i, j]);
+                    players[i, j]=null;
+                }
+            }
+        }
     }
+    
 }

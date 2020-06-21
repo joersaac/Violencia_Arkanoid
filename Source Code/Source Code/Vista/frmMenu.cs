@@ -42,8 +42,9 @@ namespace Source_Code
             {
                 MessageBox.Show("Cerrando..." + "\nHASTA PRONTO!", "ARKANOID", MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
+
+                this.Close();
                 Application.Exit();
-               
             }
         }
 
