@@ -19,7 +19,7 @@ namespace Source_Code
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             WindowState = FormWindowState.Maximized;
 
-            players = new Label[10, 2];
+            players = new Label[11, 2];
 
             lblTop.Left = this.ClientSize.Width / 2 - lblTop.Width / 2;
 
@@ -35,29 +35,49 @@ namespace Source_Code
                 int SampleTop = lblTop.Bottom + 65,
                     SampleLeft = this.ClientSize.Width / 2;
 
-                for (int i = 0; i < playerList.Count; i++)
+                for (int i = 0; i < playerList.Count+1; i++)
                 {
                     for (int j = 0; j < 2; j++)
                     {
                         players[i, j] = new Label();
 
-                        if (j == 0)
+                        switch (j)
                         {
-                            players[i, j].Text = playerList[i].Nickname;
-                            players[i, j].Left = SampleLeft - 300;
+                            case 0:
+                                switch (i) {
+                                    case 0:
+                                        players[i, j].Text = "PLAYERS:";
+                                        players[i, j].ForeColor = Color.PaleGreen;
+                                        break;
+                                    default:
+                                        players[i, j].Text = playerList[i-1].Nickname;
+                                        players[i, j].ForeColor = lblTop.ForeColor;
+                                        break;
+                                }
+                                players[i, j].Left = SampleLeft - 300;
+                                break;
+                            default:
+                                switch (i)
+                                {
+                                    case 0:
+                                        players[i, j].Text = "SCORE:";
+                                        players[i, j].ForeColor = Color.PaleGreen;
+                                        break;
+                                    default:
+                                        players[i, j].Text = playerList[i-1].Score.ToString();
+                                        players[i, j].ForeColor = lblTop.ForeColor;
+                                        break;
+                                }
+                                players[i, j].Left = SampleLeft + 100;
+                                break;
                         }
-                        else
-                        {
-                            players[i, j].Text = playerList[i].Score.ToString();
-                            players[i, j].Left = SampleLeft +100;
-                        }
+
                         players[i, j].Top = SampleTop + (SampleTop / 3) * i;
                         players[i, j].BackColor = Color.Transparent;
                         //players[i, j].Dock = DockStyle.None;
                         players[i, j].AutoSize = true;
                         players[i, j].Height += 3;
                         players[i, j].Font = lblTop.Font;
-                        players[i, j].ForeColor = lblTop.ForeColor;
                         players[i, j].TextAlign = ContentAlignment.MiddleCenter;
 
                         Controls.Add(players[i, j]);
@@ -72,6 +92,7 @@ namespace Source_Code
 
         private void FrmTop_FormClosing(object sender, FormClosingEventArgs e)
         {
+            Hide();
             var playerList = TopController.Top();
 
             for (int i = 0; i < playerList.Count; i++)
