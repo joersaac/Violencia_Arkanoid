@@ -44,7 +44,7 @@ namespace Source_Code
                         if (j == 0)
                         {
                             players[i, j].Text = playerList[i].Nickname;
-                            players[i, j].Left = SampleLeft - 200;
+                            players[i, j].Left = SampleLeft - 300;
                         }
                         else
                         {
