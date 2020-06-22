@@ -48,8 +48,6 @@ namespace Source_Code
 
         private void BtnExit_Click(object sender, EventArgs e)
         {
-            //Detener sonido
-            sonido.Stop();
             if (MessageBox.Show("¿Seguro que deseas salir ?", "ARKANOID",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
