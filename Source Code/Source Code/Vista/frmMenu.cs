@@ -42,13 +42,12 @@ namespace Source_Code
             
             this.Hide();
             login.ShowDialog();
+            sonido.Play();
             this.Show();
         }
 
         private void BtnExit_Click(object sender, EventArgs e)
         {
-            //Detener sonido
-            sonido.Stop();
             if (MessageBox.Show("¿Seguro que deseas salir ?", "ARKANOID",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
@@ -69,6 +68,7 @@ namespace Source_Code
             Hide();
             top.ShowDialog();
             Show();
+            sonido.Play();
         }
     }
 }

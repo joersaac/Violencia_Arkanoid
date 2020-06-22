@@ -11,7 +11,6 @@ namespace Source_Code
 {
     public partial class FrmLogin : Form
     {
-        private FrmMenu Menu;
         private FrmGame Game = new FrmGame();
         public FrmLogin()
         {
@@ -105,9 +104,7 @@ namespace Source_Code
 
         private void BtnReturn_Click(object sender, EventArgs e)
         {
-            Menu = new FrmMenu();
             this.Close();
-            Menu.ShowDialog();
         }
     }
 }
