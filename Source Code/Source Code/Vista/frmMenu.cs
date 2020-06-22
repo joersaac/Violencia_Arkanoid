@@ -42,6 +42,7 @@ namespace Source_Code
             
             this.Hide();
             login.ShowDialog();
+            sonido.Play();
             this.Show();
         }
 
@@ -69,6 +70,7 @@ namespace Source_Code
             Hide();
             top.ShowDialog();
             Show();
+            sonido.Play();
         }
     }
 }

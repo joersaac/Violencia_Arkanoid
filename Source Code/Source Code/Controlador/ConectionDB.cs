@@ -7,7 +7,7 @@ namespace Source_Code
     {
         //Insertar los datos necesarios para la conexión con la base de datos
         private static string sConnection =
-            "Server=127.0.0.1;Port=5432;User Id=postgres;Password=1234;Database=Proyecto";
+            "Server=127.0.0.1;Port=5432;User Id=postgres;Password=0df3f9c8;Database=Proyecto";
 
 
         //Función cuando se ejecuta una Consulta

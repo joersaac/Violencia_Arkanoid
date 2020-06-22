@@ -9,7 +9,6 @@ namespace Source_Code
     {
 
         private Label[,] players;
-        private FrmMenu Menu;
         public FrmTop()
         {
             InitializeComponent();
@@ -118,9 +117,7 @@ namespace Source_Code
         private void btnExit_Click(object sender, EventArgs e)
         {
             //Regresar a la pantalla del menú
-            Menu = new FrmMenu();
             this.Close();
-            Menu.ShowDialog();
         }
     }
     
