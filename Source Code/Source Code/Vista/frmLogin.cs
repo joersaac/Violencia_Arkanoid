@@ -25,7 +25,7 @@ namespace Source_Code
             var playerNickname = new List<string>();
             try
             {
-                switch (textBox1.Text)
+                switch (txtLogin.Text)
                 {
                     case string aux when aux.Trim().Length == 0:
                         throw new EmptyNicknameException("no puede dejar el campo vacio");
@@ -36,12 +36,12 @@ namespace Source_Code
                         bool found = false;
                         foreach (DataRow dr in dt.Rows)
                         {
-                            if (dr[0].ToString().Equals(textBox1.Text))
+                            if (dr[0].ToString().Equals(txtLogin.Text))
                             {
                                 found = true;
 
                                 //Hacer que la variable playerName sea igual que el nombre
-                                ControlJuego.playerName = textBox1.Text;
+                                ControlJuego.playerName = txtLogin.Text;
 
                                 break;
                             }
@@ -49,10 +49,10 @@ namespace Source_Code
 
                         if (!found)
                         {
-                            ConectionDB.ExecuteNonQuery($"INSERT INTO PLAYER(nickname) VALUES ('{textBox1.Text}')");
+                            ConectionDB.ExecuteNonQuery($"INSERT INTO PLAYER(nickname) VALUES ('{txtLogin.Text}')");
 
                             //Hacer que la variable playerName sea igual que el nombre
-                            ControlJuego.playerName = textBox1.Text;
+                            ControlJuego.playerName = txtLogin.Text;
                         }
 
                         this.Hide();
@@ -80,25 +80,25 @@ namespace Source_Code
             //Reproducir el sonido
             sonido.Play();
             
-            pictureBox1.Image = Image.FromFile("../../Resorces/Buttons layaout.png");
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.Width = 512;
-            pictureBox1.Height = 192;
-            pictureBox1.Left = Convert.ToInt32((this.ClientSize.Width / 2) - (pictureBox1.Width / 2));
-            pictureBox1.Top = 224;
-            pictureBox1.SendToBack();
+            picLogin.Image = Image.FromFile("../../Resorces/Buttons layaout.png");
+            picLogin.SizeMode = PictureBoxSizeMode.StretchImage;
+            picLogin.Width = 512;
+            picLogin.Height = 192;
+            picLogin.Left = Convert.ToInt32((this.ClientSize.Width / 2) - (picLogin.Width / 2));
+            picLogin.Top = 224;
+            picLogin.SendToBack();
 
             btnLogin.Width = 256;
             btnLogin.Height = 64;
-            btnLogin.Left = pictureBox1.Left;
+            btnLogin.Left = picLogin.Left;
             btnLogin.Top = 480;
 
             label1.Top = 270;
-            textBox1.Top = 330;
+            txtLogin.Top = 330;
 
             btnReturn.Width = 256;
             btnReturn.Height = 64;
-            btnReturn.Left = pictureBox1.Right - btnReturn.Width;
+            btnReturn.Left = picLogin.Right - btnReturn.Width;
             btnReturn.Top = 480;
 
         }

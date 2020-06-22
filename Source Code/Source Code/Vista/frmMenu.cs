@@ -25,8 +25,8 @@ namespace Source_Code
             Height = Screen.PrimaryScreen.Bounds.Height;
             Width = Screen.PrimaryScreen.Bounds.Width;
 
-            pictureBox1.Left = Convert.ToInt32(this.ClientSize.Width / 2 - pictureBox1.Width / 2);
-            pictureBox1.Top = 104;
+            picMenu.Left = Convert.ToInt32(this.ClientSize.Width / 2 - picMenu.Width / 2);
+            picMenu.Top = 104;
             btnTop.Height = btnPlay.Height = btnExit.Height = 64;
             btnTop.Width = btnExit.Width = btnPlay.Width = 320;
             btnPlay.Left = btnExit.Left = btnTop.Left = Convert.ToInt32(this.ClientSize.Width /2 - 161);
