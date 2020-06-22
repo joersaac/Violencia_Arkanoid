@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using System.Media;
 
 namespace Source_Code
 {
@@ -7,9 +8,15 @@ namespace Source_Code
     {
         private FrmLogin login;
         private FrmTop top;
+        private SoundPlayer sonido;
 
         public FrmMenu()
         {
+            //Agregar el sonido que queremos reproducir
+            sonido = new SoundPlayer("../../Resorces/Arkanoid.wav");
+            //Reproducir el sonido
+            sonido.Play();
+            
             login = new FrmLogin();
             top = new FrmTop();
             InitializeComponent();
@@ -30,6 +37,9 @@ namespace Source_Code
 
         private void BtnPlay_Click(object sender, EventArgs e)
         {
+            //Detener el sonido al ir al login
+            sonido.Stop();
+            
             this.Hide();
             login.ShowDialog();
             this.Show();
@@ -37,6 +47,8 @@ namespace Source_Code
 
         private void BtnExit_Click(object sender, EventArgs e)
         {
+            //Detener sonido
+            sonido.Stop();
             if (MessageBox.Show("¿Seguro que deseas salir ?", "ARKANOID",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
@@ -51,6 +63,8 @@ namespace Source_Code
 
         private void BtnTop_Click(object sender, EventArgs e)
         {
+            //Detener el sonido
+            sonido.Stop();
             //Mostrar la ventana del top jugadores
             Hide();
             top.ShowDialog();

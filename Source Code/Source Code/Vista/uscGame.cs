@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using Source_Code.Controlador;
+using System.Media;
 
 namespace Source_Code
 {
@@ -41,6 +42,13 @@ namespace Source_Code
 
         private void SetBlocks()
         {
+            //Variable que contendra al sonido
+            SoundPlayer sonido;
+            //Agregar el sonido que queremos reproducir
+            sonido = new SoundPlayer("../../Resorces/RoundStart.wav");
+            //Reproducir el sonido
+            sonido.Play();
+            
             //se establece el alto y ancho de llos bloques teniendo como alto el 17% del alto del
             //UserControl y como ancho se divide el ancho del UserControl entre el numero de columnas
             int blockHeight = Convert.ToInt32((this.Height) / 17);
@@ -190,6 +198,13 @@ namespace Source_Code
         {
             if (ControlJuego.score == ControlJuego.total)
             {
+                //Variable que contendra al sonido
+                SoundPlayer sonido;
+                //Agregar el sonido que queremos reproducir
+                sonido = new SoundPlayer("../../Resorces/Start.wav");
+                //Reproducir el sonido
+                sonido.Play();
+                
                 //se paran los timers 1 y 2
                 timer1.Enabled = false;
                 timer2.Enabled = false;
@@ -232,7 +247,12 @@ namespace Source_Code
 
         private void LoseLife()
         {
-
+            //Variable que contendra al sonido
+            SoundPlayer sonido;
+            //Agregar el sonido que queremos reproducir
+            sonido = new SoundPlayer("../../Resorces/LoseLife.wav");
+            //Reproducir el sonido
+            sonido.Play();
 
             //si la pelorta toca el fondo se resta una vida y la velocidad horizontal se vuelve 0
             ControlBall.hSpeed = 0;
@@ -242,6 +262,13 @@ namespace Source_Code
             //Si ya no se cuentan con vidas el juego termina
             if (ControlJuego.vidas == 0)
             {
+                //Variable que contendra al sonido
+                SoundPlayer sonido2;
+                //Agregar el sonido que queremos reproducir
+                sonido2 = new SoundPlayer("../../Resorces/GameOver.wav");
+                //Reproducir el sonido
+                sonido2.Play();
+                
                 throw new NoRemainingLivesException("YOU LOSE\nGAME OVER");
             }
 

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using System.Media;
 
 namespace Source_Code
 {
@@ -8,6 +9,7 @@ namespace Source_Code
     {
 
         private Label[,] players;
+        private FrmMenu Menu;
         public FrmTop()
         {
             InitializeComponent();
@@ -16,6 +18,13 @@ namespace Source_Code
 
         private void FrmTop_Load(object sender, EventArgs e)
         {
+            //Variable que contendra al sonido
+            SoundPlayer sonido;
+            //Agregar el sonido que queremos reproducir
+            sonido = new SoundPlayer("../../Resorces/Top.wav");
+            //Reproducir el sonido
+            sonido.Play();
+            
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             WindowState = FormWindowState.Maximized;
 
@@ -103,6 +112,15 @@ namespace Source_Code
                     players[i, j]=null;
                 }
             }
+        }
+
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            //Regresar a la pantalla del menú
+            Menu = new FrmMenu();
+            this.Close();
+            Menu.ShowDialog();
         }
     }
     

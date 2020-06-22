@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using System.Media;
 
 namespace Source_Code
 {
@@ -13,6 +14,16 @@ namespace Source_Code
             //Se observa si hay colisiones con los bloques
             if (ball.Bounds.IntersectsWith(block.Bounds) && block.Visible)
             {
+                 //Variable que contendra el sonido
+                 SoundPlayer sonido;
+                
+                 //Agregar el sonido que queremos reproducir
+                 sonido = new SoundPlayer("../../Resorces/ColisionBloque.wav");
+                  //Reproducir el sonido
+                 sonido.Play();
+               
+                
+                
                 //se reduce la durabilidad del bloque en 1
                 block.HitPoints = block.HitPoints - 1;
 
@@ -59,6 +70,14 @@ namespace Source_Code
             //Esta funcion es para comprobar la colision con la plataforma 
             if (ball.Bounds.IntersectsWith(platform.Bounds))
             {
+                //Variable que contendra el sonido
+                SoundPlayer sonido;
+                
+                //Agregar el sonido que queremos reproducir
+                sonido = new SoundPlayer("../../Resorces/ColisionNave.wav");
+                //Reproducir el sonido
+                sonido.Play();
+                
                 int tird = Convert.ToInt32(platform.Width * 0.33);
                 int half = Convert.ToInt32(platform.Width * 0.5);
                 //dependiendo de en que parte de la misma choque la pelota hay 5 formas distintas en las

@@ -5,6 +5,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using Npgsql;
 using Source_Code.Controlador;
+using System.Media;
 
 namespace Source_Code
 {
@@ -72,6 +73,13 @@ namespace Source_Code
 
         private void FrmLogin_Load(object sender, EventArgs e)
         {
+            //Variable que contendra al sonido
+            SoundPlayer sonido;
+            //Agregar el sonido que queremos reproducir
+            sonido = new SoundPlayer("../../Resorces/Start.wav");
+            //Reproducir el sonido
+            sonido.Play();
+            
             pictureBox1.Image = Image.FromFile("../../Resorces/Buttons layaout.png");
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.Width = 512;
