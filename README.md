@@ -1,12 +1,12 @@
-#Violencia
-##Integrantes
+# Violencia
+## Integrantes
 * Axel Javier Alvarez Medina 00088119
 * Joaquin Ernesto Santos Acosta	00159619
 * Wilfredo Josue Morales Alfaro	00025719
-##IDE
+## IDE
 * Visual Studio Community 2019
 * JetBrains Rider 2019
-##FAQ
+## FAQ
 * **¿Cómo funciona el rebote de la pelota?**
 
   R// Para que la pelota rebote necesita interactuar con algún bloque, la plataforma o las paredes. El tipo de rebote depende de la interacción entre la pelota y la plataforma; el rebote será más vertical entre más cerca del centro esta golpee a la plataforma, rebotara a la izquierda si golpea a la izquierda del centro de la plataforma y a la derecha si golpea a la derecha del centro de la plataforma.
@@ -39,5 +39,5 @@
 
   R// Para volver a jugar basta con cliquear el botón de jugar en el menú y volver a ingresar tu nickname, o uno distinto si así se desea,  y registrarse.
 
-##Trello
+## Trello
 Link: https://trello.com/b/bbLDWza9/proyecto-poo-2020
