@@ -103,7 +103,7 @@ namespace Source_Code
             Hide();
             var playerList = TopController.Top();
 
-            for (int i = 0; i < playerList.Count; i++)
+            for (int i = 0; i < playerList.Count+1; i++)
             {
                 for (int j = 0; j < 2; j++)
                 {

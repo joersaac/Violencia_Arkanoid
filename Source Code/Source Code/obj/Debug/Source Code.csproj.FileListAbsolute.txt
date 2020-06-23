@@ -92,7 +92,6 @@ C:\Users\JOAQUIN SANTOS\Documents\Repositorios\Violencia_Arkanoid\Violencia_Arka
 C:\Users\JOAQUIN SANTOS\Documents\Repositorios\Violencia_Arkanoid\Violencia_Arkanoid\Source Code\Source Code\bin\Debug\System.Threading.Tasks.Extensions.dll
 C:\Users\JOAQUIN SANTOS\Documents\Repositorios\Violencia_Arkanoid\Violencia_Arkanoid\Source Code\Source Code\bin\Debug\System.ValueTuple.dll
 C:\Users\JOAQUIN SANTOS\Documents\Repositorios\Violencia_Arkanoid\Violencia_Arkanoid\Source Code\Source Code\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
-C:\Users\JOAQUIN SANTOS\Documents\Repositorios\Violencia_Arkanoid\Violencia_Arkanoid\Source Code\Source Code\bin\Debug\Npgsql.pdb
 C:\Users\JOAQUIN SANTOS\Documents\Repositorios\Violencia_Arkanoid\Violencia_Arkanoid\Source Code\Source Code\bin\Debug\Npgsql.xml
 C:\Users\JOAQUIN SANTOS\Documents\Repositorios\Violencia_Arkanoid\Violencia_Arkanoid\Source Code\Source Code\bin\Debug\System.Buffers.xml
 C:\Users\JOAQUIN SANTOS\Documents\Repositorios\Violencia_Arkanoid\Violencia_Arkanoid\Source Code\Source Code\bin\Debug\System.Memory.xml
@@ -109,3 +108,5 @@ C:\Users\JOAQUIN SANTOS\Documents\Repositorios\Violencia_Arkanoid\Violencia_Arka
 C:\Users\Axel Medina\Desktop\Proyecto_Poo\Violencia_Arkanoid\Source Code\Source Code\obj\Debug\Source_Code.frmTop.resources
 C:\Users\Axel Medina\Desktop\Proyecto_Poo\Violencia_Arkanoid\Source Code\Source Code\bin\Debug\System.Threading.Channels.dll
 C:\Users\Axel Medina\Desktop\Proyecto_Poo\Violencia_Arkanoid\Source Code\Source Code\bin\Debug\System.Threading.Channels.xml
+C:\Users\JOAQUIN SANTOS\Documents\Repositorios\Violencia_Arkanoid\Violencia_Arkanoid\Source Code\Source Code\bin\Debug\System.Threading.Channels.dll
+C:\Users\JOAQUIN SANTOS\Documents\Repositorios\Violencia_Arkanoid\Violencia_Arkanoid\Source Code\Source Code\bin\Debug\System.Threading.Channels.xml

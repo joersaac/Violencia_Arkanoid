@@ -28,18 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources =
-                new System.ComponentModel.ComponentResourceManager(typeof(FrmMenu));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMenu));
             this.btnExit = new System.Windows.Forms.Button();
             this.btnTop = new System.Windows.Forms.Button();
             this.btnPlay = new System.Windows.Forms.Button();
-<<<<<<< HEAD
             this.picMenu = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize) (this.picMenu)).BeginInit();
-=======
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
->>>>>>> 362c289f866b7f8a66e47801e119adfdb77f222c
+            ((System.ComponentModel.ISupportInitialize)(this.picMenu)).BeginInit();
             this.SuspendLayout();
             // 
             // btnExit
@@ -51,22 +45,12 @@
             this.btnExit.FlatAppearance.BorderSize = 0;
             this.btnExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
             this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
-<<<<<<< HEAD
-            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular,
-                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.btnExit.ForeColor = System.Drawing.Color.PaleGreen;
-            this.btnExit.Location = new System.Drawing.Point(350, 719);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(371, 96);
-=======
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.PaleGreen;
             this.btnExit.Location = new System.Drawing.Point(315, 575);
             this.btnExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(334, 77);
->>>>>>> 362c289f866b7f8a66e47801e119adfdb77f222c
             this.btnExit.TabIndex = 4;
             this.btnExit.Text = "SALIR";
             this.btnExit.UseVisualStyleBackColor = false;
@@ -81,22 +65,12 @@
             this.btnTop.FlatAppearance.BorderSize = 0;
             this.btnTop.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
             this.btnTop.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
-<<<<<<< HEAD
-            this.btnTop.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular,
-                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.btnTop.ForeColor = System.Drawing.Color.PaleGreen;
-            this.btnTop.Location = new System.Drawing.Point(350, 578);
-            this.btnTop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnTop.Name = "btnTop";
-            this.btnTop.Size = new System.Drawing.Size(371, 96);
-=======
             this.btnTop.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTop.ForeColor = System.Drawing.Color.PaleGreen;
             this.btnTop.Location = new System.Drawing.Point(315, 462);
             this.btnTop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTop.Name = "btnTop";
             this.btnTop.Size = new System.Drawing.Size(334, 77);
->>>>>>> 362c289f866b7f8a66e47801e119adfdb77f222c
             this.btnTop.TabIndex = 2;
             this.btnTop.Text = "TOP 10";
             this.btnTop.UseVisualStyleBackColor = false;
@@ -111,47 +85,36 @@
             this.btnPlay.FlatAppearance.BorderSize = 0;
             this.btnPlay.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
             this.btnPlay.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-<<<<<<< HEAD
-            this.btnPlay.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular,
-                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.btnPlay.ForeColor = System.Drawing.Color.PaleGreen;
-            this.btnPlay.Location = new System.Drawing.Point(350, 436);
-            this.btnPlay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnPlay.Name = "btnPlay";
-            this.btnPlay.Size = new System.Drawing.Size(371, 96);
-=======
             this.btnPlay.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPlay.ForeColor = System.Drawing.Color.PaleGreen;
             this.btnPlay.Location = new System.Drawing.Point(328, 349);
             this.btnPlay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPlay.Name = "btnPlay";
             this.btnPlay.Size = new System.Drawing.Size(334, 77);
->>>>>>> 362c289f866b7f8a66e47801e119adfdb77f222c
             this.btnPlay.TabIndex = 3;
             this.btnPlay.Text = "JUGAR";
             this.btnPlay.UseVisualStyleBackColor = false;
             this.btnPlay.Click += new System.EventHandler(this.BtnPlay_Click);
             // 
-            // picMenu
+            // pictureBox1
             // 
-<<<<<<< HEAD
             this.picMenu.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.picMenu.BackColor = System.Drawing.Color.Transparent;
-            this.picMenu.Image = ((System.Drawing.Image) (resources.GetObject("picMenu.Image")));
-            this.picMenu.Location = new System.Drawing.Point(117, 10);
-            this.picMenu.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.picMenu.Name = "picMenu";
-            this.picMenu.Size = new System.Drawing.Size(850, 369);
+            this.picMenu.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.picMenu.Location = new System.Drawing.Point(105, 8);
+            this.picMenu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.picMenu.Name = "pictureBox1";
+            this.picMenu.Size = new System.Drawing.Size(765, 295);
             this.picMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picMenu.TabIndex = 5;
             this.picMenu.TabStop = false;
             // 
             // FrmMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1098, 918);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(988, 734);
             this.Controls.Add(this.picMenu);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnTop);
@@ -160,34 +123,7 @@
             this.Name = "FrmMenu";
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            ((System.ComponentModel.ISupportInitialize) (this.picMenu)).EndInit();
-=======
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(105, 8);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(765, 295);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            // 
-            // FrmMenu
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(988, 734);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.btnTop);
-            this.Controls.Add(this.btnPlay);
-            this.Name = "FrmMenu";
-            this.Text = "Form1";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
->>>>>>> 362c289f866b7f8a66e47801e119adfdb77f222c
+            ((System.ComponentModel.ISupportInitialize)(this.picMenu)).EndInit();
             this.ResumeLayout(false);
 
         }
