@@ -21,7 +21,7 @@
 
 * **¿Qué pasa si encuentro un error?**
 
-  R// En cualquier se encontrara un error por favor notificarlo al siguiente correo: 00159619@uca.edu.sv
+  R// En cualquier caso se encontrara un error por favor notificarlo al siguiente correo: 00159619@uca.edu.sv
 
 * **¿Dónde puedo ver mi puntaje?**
 
